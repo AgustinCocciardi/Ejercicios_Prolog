@@ -21,8 +21,4 @@ promociona(X,P):-parcial1(X,N1),parcial2(X,N2),(N1>6,N2>6),P is(N1+N2)/2.
 cursada(X):-parcial1(X,_),parcial2(X,_),not(recursa(X)),not(promociona(X,_)).
 ausente(X):-((parcial1(X,_),not(parcial2(X,_));(parcial2(X,_),not(parcial1(X,_))))).
 
-
-
-
-
-
+cls:-write('\e[2J').
