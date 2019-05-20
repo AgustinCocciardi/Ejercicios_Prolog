@@ -16,8 +16,6 @@ multiplicar(P,X,Y):- P is X*Y.
 sumar(S,X,Y):- S is X+Y.
 menor(X,Y):-  X<Y.
 
-
-
 viaje(C,S,H,P):-transporte(C,PT),alojamiento(C,H,PH),multiplicar(PA,PH,S),sumar(P,PA,PT).
 
 viajeeconomico(C,S,H,P,Pmax):-viaje(C,S,H,P),menor(P,Pmax).
