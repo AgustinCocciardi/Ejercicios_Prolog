@@ -14,5 +14,4 @@ son_limitrofes(X,Y):-limita_con(X,Y);limita_con(Y,X).
 
 son_translimitrofes(X,Y):-dif(X,Y),son_limitrofes(X,Z),son_limitrofes(Z,Y),not(son_limitrofes(X,Y)).
 
-
-
+cls:-write('\e[2J').
