@@ -22,6 +22,4 @@ viaje(C,S,H,P):-transporte(C,PT),alojamiento(C,H,PH),multiplicar(PA,PH,S),sumar(
 
 viajeeconomico(C,S,H,P,Pmax):-viaje(C,S,H,P),menor(P,Pmax).
 
-
-
-
+cls:-write('\e[2J').
