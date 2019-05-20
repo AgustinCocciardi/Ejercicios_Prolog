@@ -2,7 +2,7 @@
 
 entrada(paella).
 entrada(gazpacho).
-entrada(consomé).
+entrada(consomÃ©).
 
 carne(filete_de_cerdo).
 carne(pollo_asado).
@@ -22,15 +22,11 @@ menu(X,Y,Z):-entrada(X),plato_principal(Y),postre(Z).
 
 %b)
 
-menu_consome(Y,Z):-menu(consomé,Y,Z).
+menu_consome(Y,Z):-menu(consomÃ©,Y,Z).
 
 
 %c)
 
 menu_sin_flan(X,Y,Z):-dif(Z,flan),menu(X,Y,Z).
 
-
-
-
-
-
+cls:-write('\e[2J').
