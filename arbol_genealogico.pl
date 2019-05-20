@@ -1,24 +1,21 @@
 hombre(pedro) .
 hombre(manuel) .
 hombre(arturo) .
-mujer(maría).
+mujer(marÃ­a).
 padre(pedro, manuel).
 padre(pedro, arturo).
-padre(pedro, maría) .
+padre(pedro, marÃ­a) .
 
-niño(X,Y):-padre(Y,X),hombre(Y).
+niÃ±o(X,Y):-padre(Y,X),hombre(Y).
 
-hijo(X,Y):-niño(X,Y),hombre(X).
+hijo(X,Y):-niÃ±o(X,Y),hombre(X).
 
-hija(X,Y):-niño(X,Y),mujer(X).
+hija(X,Y):-niÃ±o(X,Y),mujer(X).
 
-hermano-o-hermana(X,Y):-dif(X,Y),niño(X,Z),niño(Y,Z).
+hermano-o-hermana(X,Y):-dif(X,Y),niÃ±o(X,Z),niÃ±o(Y,Z).
 
 hermano(X,Y):-hermano-o-hermana(X,Y),hombre(X).
 
 hermana(X,Y):-hermano-o-hermana(X,Y),mujer(X).
 
 cls:-write('\e[2J').
-
-
-
