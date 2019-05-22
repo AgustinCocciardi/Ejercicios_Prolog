@@ -1,0 +1,16 @@
+herramienta(pinza,150).
+herramienta(martillo,100).
+herramienta(tenaza,120).
+herramienta(taladro,340).
+herramienta(amoladora,340).
+
+producto_cartesiano(X,P,Y,Q):-herramienta(X,P),herramienta(Y,Q).
+seleccion_menor(X,P,Y,Q):-producto_cartesiano(X,P,Y,Q),P<Q.
+proyeccion_menor(X,P):-seleccion_menor(X,P,_,_).
+herramienta_mayor(X,P):-herramienta(X,P),not(proyeccion_menor(X,P)).
+
+seleccion_mayor(X,P,Y,Q):-producto_cartesiano(X,P,Y,Q),P>Q.
+proyeccion_mayor(X,P):-seleccion_mayor(X,P,_,_).
+herramienta_menor(X,P):-herramienta(X,P),not(proyeccion_mayor(X,P)).
+
+
