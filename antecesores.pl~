@@ -13,7 +13,6 @@ madre(miranda,carla).
 madre(carla,alfonso).
 madre(amanda,brian).
 
-padre(hernan,carla).
 padre(gustavo,miranda).
 padre(brian,victor).
 padre(victor,carlos).
