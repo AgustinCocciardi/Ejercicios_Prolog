@@ -24,4 +24,7 @@ pow_prod_sucesiva(X,Y,P):-Y>1,Y1 is Y-1,pow_prod_sucesiva(X,Y1,P1), P is P1*X.
 div_resta_sucesiva(X,Y,0):-X<Y,!.
 div_resta_sucesiva(X,Y,P):-X>=Y,X1 is X-Y,div_resta_sucesiva(X1,Y,P1), P is P1+1.
 
+div_resta_sucesiva_resto(X,Y,0,X):-X<Y,!.
+div_resta_sucesiva_resto(X,Y,P,R):-X>=Y, X1 is X-Y, div_resta_sucesiva_resto(X1,Y,P1,R1), P is P1+1, R is R1.
+
 cls:-write('\e[2J').
