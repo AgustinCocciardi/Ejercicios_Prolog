@@ -18,5 +18,3 @@ area(rectangulo,A):-rectangulo(B,H), A is B*H.
 prod_y_sel(F1,A1,F2,A2):-area(F1,A1),area(F2,A2), A1<A2.
 proy(F1,A1):-prod_y_sel(F1,A1,_,_).
 mayor(F1,A1):-area(F1,A1), not(proy(F1,A1)).
-
-
